@@ -5,7 +5,7 @@ const userRepository = require('../repository/userRepository');
 const userService = {
   getUser: async (req, res) => {
     try {
-        //let userData = await userRepository.SearchById(req.params.id);
+        let userData = await userRepository.SearchById(req.params.id);
         if (userData) {
             res.status(200).json({
                 date: new Date(),
